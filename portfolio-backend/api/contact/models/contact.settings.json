@@ -1,0 +1,40 @@
+{
+  "info": {
+    "name": "contact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "contactName": {
+      "type": "string",
+      "required": true
+    },
+    "contactEmail": {
+      "type": "email",
+      "minLength": 5,
+      "maxLength": 40
+    },
+    "contactPhone": {
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 5
+    },
+    "contactPreference": {
+      "type": "enumeration",
+      "enum": [
+        "email",
+        "phone"
+      ]
+    },
+    "inquiry": {
+      "type": "richtext",
+      "minLength": 10,
+      "maxLength": 1000,
+      "required": true
+    }
+  },
+  "connection": "default",
+  "collectionName": "contacts"
+}

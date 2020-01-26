@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "techStack",
+    "icon": "list-ul"
+  },
+  "options": {},
+  "attributes": {
+    "techUsed": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_tech_stack_tech_stacks"
+}

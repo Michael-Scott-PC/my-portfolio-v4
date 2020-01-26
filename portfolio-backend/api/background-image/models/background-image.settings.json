@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "background_images",
+  "info": {
+    "name": "backgroundImage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "imageLocation": {
+      "type": "enumeration",
+      "enum": [
+        "homeTopM",
+        "homeBottomM",
+        "homeTopD",
+        "homeBottomD",
+        "projectsTopM",
+        "projectsBottomM",
+        "projectsTopD",
+        "projectsBottomD",
+        "skillsTopM",
+        "skillsBottomM",
+        "skillsTopD",
+        "skillsBottomD",
+        "hobbiesTopM",
+        "hobbiesBottomM",
+        "hobbiesTopD",
+        "hobbiesBottomD",
+        "blogTopM",
+        "blogBottomM",
+        "blogTopD",
+        "blogBottomD",
+        "contactTopM",
+        "contactBottomM",
+        "contactTopD",
+        "contactBottomD"
+      ]
+    },
+    "backgroundImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

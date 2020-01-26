@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "hobby"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "hobbyName": {
+      "type": "string",
+      "required": true
+    },
+    "hobbyCover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  },
+  "connection": "default",
+  "collectionName": "hobbies"
+}

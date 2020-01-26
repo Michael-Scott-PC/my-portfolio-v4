@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "sectionTitle",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_blog_section_titles"
+}

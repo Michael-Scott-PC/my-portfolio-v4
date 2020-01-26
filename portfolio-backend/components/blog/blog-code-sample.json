@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "blogCodeSample",
+    "icon": "laptop-code"
+  },
+  "options": {},
+  "attributes": {
+    "blogCodeSample": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_blog_blog_code_samples"
+}

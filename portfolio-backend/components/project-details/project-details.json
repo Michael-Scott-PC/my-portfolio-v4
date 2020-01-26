@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "components_project_details_project_details",
+  "info": {
+    "name": "projectDetails",
+    "icon": "clipboard-list"
+  },
+  "options": {},
+  "attributes": {
+    "projectImageTitle": {
+      "type": "string"
+    },
+    "projectImageDescription": {
+      "type": "text"
+    },
+    "projectDetailPhoto": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

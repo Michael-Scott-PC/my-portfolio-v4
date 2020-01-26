@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "profiles",
+  "info": {
+    "name": "profile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "aboutMe": {
+      "type": "richtext"
+    },
+    "headShot": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dynamicSkills": {
+      "type": "dynamiczone",
+      "components": [
+        "skills.skills"
+      ]
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    }
+  }
+}

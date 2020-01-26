@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "skills",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "skill": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_skills_skills"
+}

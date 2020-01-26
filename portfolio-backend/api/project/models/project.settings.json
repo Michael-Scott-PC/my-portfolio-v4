@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "projectTitle": {
+      "type": "string",
+      "required": true
+    },
+    "coverPhoto": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "projectDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "coverAltText": {
+      "type": "text",
+      "required": true
+    },
+    "publishProject": {
+      "type": "boolean",
+      "default": false
+    },
+    "dynamicTechStack": {
+      "type": "dynamiczone",
+      "components": [
+        "tech-stack.tech-stack"
+      ]
+    },
+    "dynamicProjectDetail": {
+      "type": "dynamiczone",
+      "components": [
+        "project-details.project-details"
+      ]
+    }
+  }
+}
