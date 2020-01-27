@@ -1,21 +1,52 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout";
-import Image from "../components/image";
-import SEO from "../components/seo";
+import Layout from '../components/layout';
+// import Image from "../components/image";
+import SEO from '../components/seo';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-);
+const IndexPage = ({ data }) => {
+  console.log(data);
+  const { strapiProfile } = data;
+  console.log(strapiProfile);
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div id="container-home">
+        <div class="welcome-container">
+          <h5 class="welcome">Welcome to my</h5>
+          <h2 class="portfolio">portfolio</h2>
+        </div>
+        <div id="about-me-container">
+          <h2 class="my-name">Hi, I'm {strapiProfile.name}.</h2>
+          <img
+            id="headshot"
+            src={strapiProfile.headShot.fluid}
+            alt="A head shot photograph of me by the Detroit River"
+          />
+          <h3>{strapiProfile.jobTitle}</h3>
+          <p id="about-me"> {strapiProfile.aboutMe} </p>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export const query = graphql`
+  query {
+    strapiProfile {
+      aboutMe
+      name
+      jobTitle
+      headShot {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
