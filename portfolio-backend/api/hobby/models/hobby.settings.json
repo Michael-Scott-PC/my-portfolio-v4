@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "hobbies",
   "info": {
     "name": "hobby"
   },
@@ -16,8 +18,9 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "hobbyInfo": {
+      "type": "richtext"
     }
-  },
-  "connection": "default",
-  "collectionName": "hobbies"
+  }
 }

@@ -1,7 +1,6 @@
 import headerStyles from './header.module.css';
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 

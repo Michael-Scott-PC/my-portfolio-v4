@@ -6,6 +6,16 @@ import { graphql } from 'gatsby';
 const skills = ({ data }) => {
   console.log(data);
   const { dynamicSkills } = data.strapiProfile;
+  const colors = [
+    'blue',
+    '#88883c',
+    'green',
+    'red',
+    'purple',
+    'orange',
+    'indigo',
+    'turquoise',
+  ];
   return (
     <Layout>
       <div
@@ -19,9 +29,20 @@ const skills = ({ data }) => {
         <h3 className="text-center py-4">Languages</h3>
         <ul className={`${skillsStyles.skillsUl} row`}>
           {dynamicSkills.map(skill => (
-            <Fragment>
+            <Fragment key={skill.id}>
               {skill.skillType === 'language' && (
-                <li className="col-4">{skill.skill}</li>
+                <li
+                  className="col-4"
+                  style={{
+                    color: `${
+                      colors[Math.floor(Math.random() * colors.length)]
+                    }`,
+                    fontFamily: 'Cabin Sketch',
+                    fontSize: '1.2em',
+                  }}
+                >
+                  {skill.skill}
+                </li>
               )}
             </Fragment>
           ))}
@@ -31,9 +52,20 @@ const skills = ({ data }) => {
         </h3>
         <ul className={`${skillsStyles.skillsUl} mb-5 row`}>
           {dynamicSkills.map(skill => (
-            <Fragment>
+            <Fragment key={skill.id}>
               {skill.skillType !== 'language' && (
-                <li className="col-4">{skill.skill}</li>
+                <li
+                  className="col-4"
+                  style={{
+                    color: `${
+                      colors[Math.floor(Math.random() * colors.length)]
+                    }`,
+                    fontFamily: 'Cabin Sketch',
+                    fontSize: '1.2em',
+                  }}
+                >
+                  {skill.skill}
+                </li>
               )}
             </Fragment>
           ))}
