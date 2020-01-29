@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "components_skills_skills",
   "info": {
     "name": "skills",
     "icon": "list"
@@ -7,8 +9,16 @@
   "attributes": {
     "skill": {
       "type": "string"
+    },
+    "skillType": {
+      "type": "enumeration",
+      "enum": [
+        "language",
+        "framework",
+        "database",
+        "dataTransfer",
+        "library"
+      ]
     }
-  },
-  "connection": "default",
-  "collectionName": "components_skills_skills"
+  }
 }

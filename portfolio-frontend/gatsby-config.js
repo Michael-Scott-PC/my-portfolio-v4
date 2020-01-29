@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Michael Enochs`,
+    title: `MICHAEL ENOCHS`,
     description: `A personal portfolio website for an aspiring Fullstack Developer.`,
     author: `Michael Enochs`,
   },
@@ -22,8 +22,8 @@ module.exports = {
         ],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
-          identifier: "",
-          password: "",
+          identifier: '',
+          password: '',
         },
       },
     },

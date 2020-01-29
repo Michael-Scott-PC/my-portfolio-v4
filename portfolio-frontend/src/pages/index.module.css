@@ -1,0 +1,25 @@
+.myName {
+  color: #ffffff;
+}
+
+.welcome {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 1.25em;
+  color: #ffffff;
+}
+
+.portfolio {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 6em;
+  letter-spacing: 0.1em;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.welcomeContainer {
+  position: absolute;
+  top: 145px;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
