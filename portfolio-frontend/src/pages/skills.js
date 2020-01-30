@@ -8,9 +8,9 @@ const skills = ({ data }) => {
   const { dynamicSkills } = data.strapiProfile;
   const colors = [
     'blue',
-    '#88883c',
     'green',
     'red',
+    'orangered',
     'purple',
     'orange',
     'indigo',
@@ -26,7 +26,9 @@ const skills = ({ data }) => {
         }}
       >
         <h1 className="text-center my-5">SKILLS</h1>
-        <h3 className="text-center py-4">Languages</h3>
+        <h3 className={`${skillsStyles.skillsHeaders} text-center py-4`}>
+          Languages
+        </h3>
         <ul className={`${skillsStyles.skillsUl} row`}>
           {dynamicSkills.map(skill => (
             <Fragment key={skill.id}>
@@ -47,7 +49,7 @@ const skills = ({ data }) => {
             </Fragment>
           ))}
         </ul>
-        <h3 className="text-center py-4">
+        <h3 className={`${skillsStyles.skillsHeaders} text-center py-4`}>
           Frameworks, Libraries, Databases, &amp; Data Transfer
         </h3>
         <ul className={`${skillsStyles.skillsUl} mb-5 row`}>

@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
+import ContactForm from '../components/form/contactForm';
 
 const contact = () => {
   return (
     <Layout>
-      <div>
-        <h1>CONTACT</h1>
-      </div>
+      <Fragment>
+        <ContactForm />
+      </Fragment>
     </Layout>
   );
 };

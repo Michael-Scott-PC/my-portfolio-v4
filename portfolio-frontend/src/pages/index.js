@@ -12,8 +12,7 @@ const IndexPage = ({ data }) => {
   const { strapiProfile } = data;
   const { strapiBackgroundImage } = data;
   const imageData = strapiBackgroundImage.backgroundImage.childImageSharp.fluid;
-  console.log(strapiProfile);
-  console.log(strapiProfile.headShot);
+  console.log(process.env.GATSBY_STRAPI_URL);
   return (
     <Fragment>
       <Layout>

@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "contacts",
   "info": {
     "name": "contact"
   },
@@ -9,32 +11,29 @@
   "attributes": {
     "contactName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 2,
+      "maxLength": 50
     },
     "contactEmail": {
       "type": "email",
       "minLength": 5,
-      "maxLength": 40
+      "maxLength": 40,
+      "required": true
     },
     "contactPhone": {
       "type": "string",
-      "maxLength": 20,
-      "minLength": 5
-    },
-    "contactPreference": {
-      "type": "enumeration",
-      "enum": [
-        "email",
-        "phone"
-      ]
+      "maxLength": 10,
+      "minLength": 10
     },
     "inquiry": {
       "type": "richtext",
       "minLength": 10,
       "maxLength": 1000,
       "required": true
+    },
+    "contactPreference": {
+      "type": "string"
     }
-  },
-  "connection": "default",
-  "collectionName": "contacts"
+  }
 }

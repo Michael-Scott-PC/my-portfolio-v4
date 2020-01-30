@@ -13,16 +13,8 @@ const hobbies = ({ data }) => {
         <Fragment>
           <BackgroundImage
             fluid={node.hobbyCover.childImageSharp.fluid}
-            style={{
-              height: '25vh',
-              width: '100%',
-              backgroundPosition: 'unset !important',
-              backgroundAttachment: 'fixed',
-              zIndex: '-100',
-              backgroundSize: 'contain',
-            }}
+            className={hobbiesStyles.backgroundImages}
           />
-
           <div className="container-fluid">
             <h3 className={`${hobbiesStyles.hobbyHeaders} mt-3`}>
               {node.hobbyName}
