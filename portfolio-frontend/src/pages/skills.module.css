@@ -1,5 +1,7 @@
 .skillsUl {
   list-style: none;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .skillsHeaders {

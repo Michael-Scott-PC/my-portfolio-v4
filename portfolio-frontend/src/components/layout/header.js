@@ -1,6 +1,6 @@
 import headerStyles from './header.module.css';
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -10,32 +10,6 @@ const Header = ({ siteTitle }) => {
       .getElementById('navbarToggleExternalContent')
       .classList.toggle('collapse');
   };
-
-  const data = useStaticQuery(
-    graphql`
-      query {
-        strapiProfile {
-          aboutMe
-          name
-          jobTitle
-        }
-        strapiBackgroundImage {
-          backgroundImage {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          imageLocation
-        }
-      }
-    `
-  );
-  // console.log(data);
-  // console.log(data.strapiBackgroundImage.backgroundImage.childImageSharp.fluid);
-  const imageData =
-    data.strapiBackgroundImage.backgroundImage.childImageSharp.fluid;
 
   return (
     <header
@@ -102,7 +76,7 @@ const Header = ({ siteTitle }) => {
               Hobbies
             </Link>
             <Link
-              to="/blog"
+              to="/blogs"
               className="dropdown-item"
               style={{ color: '#fff' }}
             >

@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "components_blog_blog_images",
   "info": {
     "name": "blogImage",
     "icon": "image"
@@ -10,8 +12,9 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "blogImageAlt": {
+      "type": "string"
     }
-  },
-  "connection": "default",
-  "collectionName": "components_blog_blog_images"
+  }
 }

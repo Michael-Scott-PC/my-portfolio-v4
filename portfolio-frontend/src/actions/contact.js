@@ -10,10 +10,9 @@ export const createContact = async values => {
         'Your message has been sent and I will get back to you ASAP.'
       );
     }
-    console.log(message);
+
     return message;
   } catch (error) {
-    console.log(error);
     message.push(
       'There was an issue sending your message. Please contact me directly at msenochs@gmail.com. Thank you.'
     );

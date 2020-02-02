@@ -1,0 +1,33 @@
+.blogHeaderDiv {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0 1.0875rem 1.45rem;
+}
+
+.blogPreviewDiv {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0 1.25rem 1.45rem;
+}
+
+.mainHeader {
+  font-family: 'Bowlby One SC', cursive;
+}
+
+.subHeader {
+  margin-top: -5px;
+}
+
+.blogTitle {
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.blogDate {
+  font-weight: bold;
+  color: grey;
+}
+
+.blogSubtitle {
+  font-family: 'Quicksand', sans-serif;
+}

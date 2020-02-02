@@ -1,13 +1,20 @@
-'use strict';
+"use strict";
 
 /**
  * Lifecycle callbacks for the `project` model.
  */
 
+const slugify = require("slugify");
+
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
   // beforeSave: async (model, attrs, options) => {},
+  beforeSave: async project => {
+    if (project.projectTitle) {
+      project.slug = slugify(project.projectTitle);
+    }
+  },
 
   // After saving a value.
   // Fired after an `insert` or `update` query.
@@ -40,6 +47,13 @@ module.exports = {
   // Before updating a value.
   // Fired before an `update` query.
   // beforeUpdate: async (model, attrs, options) => {},
+  beforeUpdate: async project => {
+    if (project.getUpdate() && project.getUpdate().projectTitle) {
+      project.update({
+        slug: slugify(project.getUpdate().projectTitle)
+      });
+    }
+  }
 
   // After updating a value.
   // Fired after an `update` query.

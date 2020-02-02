@@ -41,6 +41,8 @@ const skills = ({ data }) => {
                     }`,
                     fontFamily: 'Cabin Sketch',
                     fontSize: '1.2em',
+                    paddingRight: '10px',
+                    paddingLeft: '10px',
                   }}
                 >
                   {skill.skill}
@@ -63,7 +65,9 @@ const skills = ({ data }) => {
                       colors[Math.floor(Math.random() * colors.length)]
                     }`,
                     fontFamily: 'Cabin Sketch',
-                    fontSize: '1.2em',
+                    fontSize: '1.1em',
+                    paddingRight: '10px',
+                    paddingLeft: '10px',
                   }}
                 >
                   {skill.skill}

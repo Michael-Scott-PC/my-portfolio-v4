@@ -21,7 +21,7 @@ const projects = ({ data }) => {
           {nodes.map(node => (
             <div key={node.id}>
               {/* TODO: dynamically create page slugs */}
-              <Link to="/">
+              <Link to={`${node.slug}`}>
                 <h3 className="text-center">{node.projectTitle}</h3>
                 <Img
                   fluid={node.coverPhoto.childImageSharp.fluid}
@@ -30,9 +30,9 @@ const projects = ({ data }) => {
                   className="m-3"
                 />
               </Link>
-              <p className="text-justify pt-3 pb-5">
+              {/* <p className="text-justify pt-3 pb-5">
                 {node.projectDescription}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>
@@ -74,6 +74,7 @@ export const query = graphql`
         }
         publishProject
         id
+        slug
       }
     }
   }

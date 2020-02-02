@@ -10,7 +10,7 @@ const hobbies = ({ data }) => {
   return (
     <Layout>
       {nodes.map(node => (
-        <Fragment>
+        <Fragment key={node.id}>
           <BackgroundImage
             fluid={node.hobbyCover.childImageSharp.fluid}
             className={hobbiesStyles.backgroundImages}
@@ -40,6 +40,7 @@ export const query = graphql`
             }
           }
         }
+        id
       }
     }
   }

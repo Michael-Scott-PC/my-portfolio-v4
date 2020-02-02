@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
               className="m-auto"
             />
             <h3 className="text-center mt-3">{strapiProfile.jobTitle}</h3>
-            <p id="about-me" className="text-justify">
+            <p id="about-me" className={`${indexStyles.aboutMe} text-justify`}>
               {' '}
               {strapiProfile.aboutMe}{' '}
             </p>

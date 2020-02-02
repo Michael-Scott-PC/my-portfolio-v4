@@ -21,6 +21,9 @@
     },
     "hobbyInfo": {
       "type": "richtext"
+    },
+    "hobbyCoverAlt": {
+      "type": "string"
     }
   }
 }

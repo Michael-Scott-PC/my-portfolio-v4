@@ -24,7 +24,6 @@ const Footer = () => {
       }
     `
   );
-  console.log(data);
 
   const { strapiProfile } = data;
 

@@ -38,6 +38,13 @@
     "categories": {
       "collection": "category",
       "via": "blog"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "blogCoverAlt": {
+      "type": "string",
+      "required": false
     }
   }
 }

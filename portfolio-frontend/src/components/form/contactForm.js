@@ -1,3 +1,4 @@
+import contactFormStyles from './contactForm.module.css';
 import React, { Fragment } from 'react';
 import { Formik } from 'formik';
 import contactSchema from './schema/contactSchema';
@@ -46,7 +47,9 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupFirstName">
-                    <Form.Label>First Name</Form.Label>
+                    <Form.Label className={contactFormStyles.formLabel}>
+                      First Name
+                    </Form.Label>
                     <Form.Control
                       type="text"
                       name="contactName"
@@ -68,7 +71,9 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label className={contactFormStyles.formLabel}>
+                      Email
+                    </Form.Label>
                     <Form.Control
                       type="email"
                       name="contactEmail"
@@ -90,7 +95,9 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupPhoneNumber">
-                    <Form.Label>Phone</Form.Label>
+                    <Form.Label className={contactFormStyles.formLabel}>
+                      Phone
+                    </Form.Label>
                     <Form.Control
                       className="text-center"
                       type="text"
@@ -111,7 +118,9 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupContactPreference">
-                    <Form.Label>Contact Preference?</Form.Label>
+                    <Form.Label className={contactFormStyles.formLabel}>
+                      Contact Preference?
+                    </Form.Label>
                     <Form.Control
                       as="select"
                       style={{ textAlignLast: 'center' }}
@@ -139,7 +148,9 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mb-3 mx-auto text-center">
                   <Form.Group controlId="formGroupTextArea">
-                    <Form.Label>How may I help you?</Form.Label>
+                    <Form.Label className={contactFormStyles.formLabel}>
+                      How may I help you?
+                    </Form.Label>
                     <Form.Control
                       as="textarea"
                       name="inquiry"

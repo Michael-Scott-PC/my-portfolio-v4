@@ -42,6 +42,9 @@
       "components": [
         "project-details.project-details"
       ]
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
