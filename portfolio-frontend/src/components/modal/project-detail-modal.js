@@ -21,7 +21,7 @@ const projectDetailModal = props => {
                   fluid={detail.projectDetailPhoto.childImageSharp.fluid}
                   className={styles.imgModal}
                 />
-                <p className={styles.description}>
+                <p className={`${styles.description} mt-4`}>
                   {detail.projectImageDescription}
                 </p>
               </Carousel.Item>

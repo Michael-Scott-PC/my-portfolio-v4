@@ -1,4 +1,4 @@
-import hobbiesStyles from './hobbies.module.css';
+import styles from '../css/hobbies.module.css';
 import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
@@ -13,13 +13,11 @@ const hobbies = ({ data }) => {
         <Fragment key={node.id}>
           <BackgroundImage
             fluid={node.hobbyCover.childImageSharp.fluid}
-            className={hobbiesStyles.backgroundImages}
+            className={styles.backgroundImages}
           />
-          <div className="container-fluid">
-            <h3 className={`${hobbiesStyles.hobbyHeaders} mt-3`}>
-              {node.hobbyName}
-            </h3>
-            <p>{node.hobbyInfo}</p>
+          <div className={`${styles.hobbyInfoContainer} container-fluid my-5`}>
+            <h3 className={`${styles.hobbyHeaders} mt-3`}>{node.hobbyName}</h3>
+            <p className={styles.hobbyInfo}>{node.hobbyInfo}</p>
           </div>
         </Fragment>
       ))}

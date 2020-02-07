@@ -1,0 +1,20 @@
+.projectsContainer {
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0 1.0875rem 1.45rem;
+}
+
+.singleProjectContainer {
+  padding: 0 0 3rem;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 500px) {
+  .projectsContainer {
+    text-align: -webkit-center;
+  }
+  .singleProjectContainer {
+    width: 75%;
+  }
+}

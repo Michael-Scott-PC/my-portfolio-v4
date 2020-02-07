@@ -1,0 +1,31 @@
+.backgroundImages {
+  height: 25vh;
+  width: 100%;
+  background-position: unset !important;
+  background-attachment: fixed;
+  z-index: -100;
+  background-size: contain;
+}
+
+.hobbyHeaders {
+  font-family: 'Fugaz One';
+  letter-spacing: 0.05em;
+}
+
+.hobbyInfo {
+  font-family: 'Gadugi';
+}
+
+@media (min-width: 500px) {
+  .backgroundImages {
+    height: 90vh;
+  }
+  .backgroundImages::before,
+  .backgroundImages::after {
+    background-size: cover !important;
+    background-position-y: center !important;
+  }
+  .hobbyInfoContainer {
+    padding: 0 5rem 1.45rem;
+  }
+}

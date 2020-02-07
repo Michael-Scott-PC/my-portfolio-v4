@@ -1,3 +1,4 @@
+import styles from '../css/projects.module.css';
 import React from 'react';
 import Layout from '../components/layout/layout';
 import { graphql, Link } from 'gatsby';
@@ -10,24 +11,20 @@ const projects = ({ data }) => {
     <Layout>
       <div>
         <h1 className="text-center my-5">Projects</h1>
-        <div
-          className="py-5"
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-        >
+        <div className={`${styles.projectsContainer} py-5`}>
           {nodes.map(node => (
-            <div key={node.id}>
+            <div
+              key={node.id}
+              className={`${styles.singleProjectContainer} mb-5`}
+            >
               {/* TODO: dynamically create page slugs */}
               <Link to={`${node.slug}`}>
-                <h3 className="text-center">{node.projectTitle}</h3>
+                <h3 className="text-center mt-4">{node.projectTitle}</h3>
                 <Img
                   fluid={node.coverPhoto.childImageSharp.fluid}
                   alt={node.coverAltText}
                   style={{ maxHeight: '250px' }}
-                  className="m-3"
+                  className={`${styles.projImg} m-3`}
                 />
               </Link>
               {/* <p className="text-justify pt-3 pb-5">

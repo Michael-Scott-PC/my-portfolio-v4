@@ -1,4 +1,4 @@
-import skillsStyles from './skills.module.css';
+import styles from '../css/skills.module.css';
 import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
@@ -26,10 +26,10 @@ const skills = ({ data }) => {
         }}
       >
         <h1 className="text-center my-5">SKILLS</h1>
-        <h3 className={`${skillsStyles.skillsHeaders} text-center py-4`}>
+        <h3 className={`${styles.skillsHeaders} text-center py-4`}>
           Languages
         </h3>
-        <ul className={`${skillsStyles.skillsUl} row`}>
+        <ul className={`${styles.skillsUl} row`}>
           {dynamicSkills.map(skill => (
             <Fragment key={skill.id}>
               {skill.skillType === 'language' && (
@@ -51,10 +51,10 @@ const skills = ({ data }) => {
             </Fragment>
           ))}
         </ul>
-        <h3 className={`${skillsStyles.skillsHeaders} text-center py-4`}>
+        <h3 className={`${styles.skillsHeaders} text-center py-4`}>
           Frameworks, Libraries, Databases, &amp; Data Transfer
         </h3>
-        <ul className={`${skillsStyles.skillsUl} mb-5 row`}>
+        <ul className={`${styles.skillsUl} mb-5 row`}>
           {dynamicSkills.map(skill => (
             <Fragment key={skill.id}>
               {skill.skillType !== 'language' && (

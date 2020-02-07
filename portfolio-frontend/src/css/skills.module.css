@@ -7,3 +7,10 @@
 .skillsHeaders {
   color: #7e7c7c;
 }
+
+@media (min-width: 500px) {
+  .skillsUl {
+    text-align: -webkit-center;
+    font-size: 1.25em;
+  }
+}

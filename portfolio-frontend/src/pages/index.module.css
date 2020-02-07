@@ -23,3 +23,36 @@
   left: 0;
   z-index: 0;
 }
+
+.aboutMe {
+  font-family: 'Gadugi';
+}
+
+/***********************
+    MEDIA QUERIES
+***********************/
+
+@media (min-width: 500px) {
+  /* .backgroundImgXs {
+    display: none;
+  } */
+
+  .myName {
+    display: none;
+  }
+
+  .welcome {
+    margin-bottom: 0;
+    margin-top: 5%;
+  }
+
+  .welcomeContainer {
+    top: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .welcomeContainer {
+    top: 100px;
+  }
+}

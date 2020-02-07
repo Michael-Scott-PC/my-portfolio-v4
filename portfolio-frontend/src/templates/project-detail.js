@@ -74,7 +74,7 @@ const ProjectDetail = data => {
             <Img fluid={imageData} alt={coverAltText} />
           </Col>
           <Col className="p-0">
-            <h3>Tech Used</h3>
+            <h3>Environment</h3>
             <ul className={styles.ulTech}>
               <Row>
                 {dynamicTechStack.map(stack => (

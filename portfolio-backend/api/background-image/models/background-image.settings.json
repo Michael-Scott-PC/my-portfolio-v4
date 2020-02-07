@@ -43,6 +43,9 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "pixels": {
+      "type": "string"
     }
   }
 }

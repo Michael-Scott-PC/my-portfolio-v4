@@ -1,41 +1,64 @@
-import indexStyles from './index.module.css';
+import styles from './index.module.css';
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/layout';
-import BackgroundImage from 'gatsby-background-image';
+// import BackgroundImage from 'gatsby-background-image';
 import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
 
 const IndexPage = ({ data }) => {
   console.log(data);
   const { strapiProfile } = data;
-  const { strapiBackgroundImage } = data;
-  const imageData = strapiBackgroundImage.backgroundImage.childImageSharp.fluid;
-  console.log(process.env.GATSBY_STRAPI_URL);
+  const { nodes } = data.allStrapiBackgroundImage;
+
+  console.log(nodes);
+  let [homeTopM, homeTopD] = nodes.map(node =>
+    node.imageLocation === 'homeTopM' ? (homeTopM = node) : (homeTopD = node)
+  );
+  console.log(homeTopM);
+  console.log(homeTopD);
+  const imageDataXs = homeTopM.backgroundImage.childImageSharp.fluid;
+  const imageDataSm = homeTopD.backgroundImage.childImageSharp.fluid;
+
   return (
     <Fragment>
       <Layout>
-        <SEO title="Home" />
-        <BackgroundImage
-          style={{ width: '100%', height: '60vh', top: '-1px' }}
+        <SEO title="Home" description={data.strapiProfile.jobTitle} />
+        {/* xs screen */}
+        <Img
+          style={{ width: '101%', height: '60vh', top: '-1px' }}
           Tag="section"
-          fluid={imageData}
-        >
-          <div className={`${indexStyles.welcomeContainer} text-center`}>
-            <h2 className={indexStyles.myName}>
-              Hi, I'm {data.strapiProfile.name}.
-            </h2>
-            <h5 className={indexStyles.welcome}>Welcome to my</h5>
-            <h2 className={indexStyles.portfolio}>portfolio</h2>
+          fluid={imageDataXs}
+          className={`${styles.backgroundImgXs} d-sm-none`}
+        />
+        <div className={`${styles.welcomeContainer} text-center`}>
+          <h2 className={`${styles.myName}`}>
+            Hi, I'm {data.strapiProfile.name}.
+          </h2>
+          <h5 className={styles.welcome}>Welcome to my</h5>
+          <h2 className={styles.portfolio}>portfolio</h2>
+        </div>
+
+        {/* sm screen & above */}
+        <div className="d-none d-sm-block">
+          <Img
+            style={{ width: '100%', height: '60vh', top: '-1px' }}
+            Tag="section"
+            fluid={imageDataSm}
+          />
+          <div className={`${styles.welcomeContainer} text-center mt-5`}>
+            <h5 className={styles.welcome}>Welcome to my</h5>
+            <h2 className={styles.portfolio}>portfolio</h2>
           </div>
-        </BackgroundImage>
+        </div>
+
         <div
           id="container-home"
           style={{
             margin: `0 auto`,
             maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
+            padding: `0 2rem 1.45rem`,
           }}
         >
           <div id="about-me-container" className="mt-5 mb-5">
@@ -47,7 +70,7 @@ const IndexPage = ({ data }) => {
               className="m-auto"
             />
             <h3 className="text-center mt-3">{strapiProfile.jobTitle}</h3>
-            <p id="about-me" className={`${indexStyles.aboutMe} text-justify`}>
+            <p id="about-me" className={`${styles.aboutMe} text-justify`}>
               {' '}
               {strapiProfile.aboutMe}{' '}
             </p>
@@ -59,7 +82,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-  query {
+  {
     strapiProfile {
       aboutMe
       name
@@ -72,15 +95,22 @@ export const query = graphql`
         }
       }
     }
-    strapiBackgroundImage {
-      backgroundImage {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+    allStrapiBackgroundImage {
+      nodes {
+        backgroundImage {
+          childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+              base64
+              srcWebp
+              sizes
+            }
           }
         }
+        imageLocation
       }
-      imageLocation
     }
   }
 `;

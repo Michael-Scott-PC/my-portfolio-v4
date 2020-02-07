@@ -3,6 +3,10 @@
   height: 15%;
 }
 
+.headerContainer {
+  padding: 1em 1em 1em 1em;
+}
+
 .siteTitle {
   color: #e46a2d;
   text-decoration: none;
@@ -17,7 +21,7 @@
   background-color: #ffffff;
 }
 
-.dropdownItem {
+.dropDownItem {
   color: #ffffff;
 }
 
@@ -29,6 +33,7 @@
   font-size: 1.5em;
   font-family: 'Quattrocento Sans', sans-serif;
   letter-spacing: 0.15em;
+  padding: 1em 0em 1em 0em;
 }
 
 .myName {
@@ -55,4 +60,33 @@
   right: 0;
   left: 0;
   z-index: 0;
+}
+
+@media (min-width: 500px) {
+  /* .siteTitle {
+    padding-left: 3em;
+  } */
+}
+
+@media (min-width: 750px) {
+  .siteTitle {
+    padding-left: 2.5em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .siteTitle {
+    font-size: 1.15em;
+    padding-left: unset;
+  }
+  .linkContainer {
+    display: inline-flex !important;
+    height: 5vh;
+    padding: 2em 0em 2em 0em;
+    justify-content: center;
+  }
+  .dropDownItem {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8em;
+  }
 }

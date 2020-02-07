@@ -48,7 +48,7 @@ const contactForm = () => {
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupFirstName">
                     <Form.Label className={contactFormStyles.formLabel}>
-                      First Name
+                      Name
                     </Form.Label>
                     <Form.Control
                       type="text"
