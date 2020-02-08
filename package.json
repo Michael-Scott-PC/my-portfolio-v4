@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "client": "cd portfolio-frontend && yarn build && yarn start",
+    "server": "cd portfolio-backend && gatsby build && gatsby serve",
+    "start": "concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
