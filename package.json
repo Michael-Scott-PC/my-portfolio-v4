@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "client": "cd portfolio-frontend && gatsby build && yarn serve",
+    "client": "cd portfolio-frontend && yarn build && yarn serve",
     "server": "cd portfolio-backend && yarn build && yarn start",
     "start": "concurrently \"yarn run server\" \"yarn run client\""
   },
