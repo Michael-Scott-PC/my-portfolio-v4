@@ -4,7 +4,6 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "${process.env.DATABASE_NAME}",
         "uri": "${process.env.DATABASE_URI}"
       },
       "options": {
