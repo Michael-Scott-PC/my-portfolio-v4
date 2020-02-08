@@ -1,4 +1,4 @@
-import footerStyles from './footer.module.css';
+import footerStyles from '../../css/footer.module.css';
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import {

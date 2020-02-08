@@ -1,5 +1,5 @@
 import styles from '../../css/project-detail-modal.module.css';
-import React, { Fragment } from 'react';
+import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Carousel from 'react-bootstrap/Carousel';
 import Img from 'gatsby-image';

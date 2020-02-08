@@ -5,14 +5,11 @@ import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
 
 const blogPost = data => {
-  console.log(data);
   const blog = data.pageContext.blogData;
-  console.log(blog);
 
   const {
     blogTitle,
     blogSubtitle,
-    id,
     blogCover,
     categories,
     dynamicBlog,

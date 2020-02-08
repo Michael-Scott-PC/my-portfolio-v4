@@ -10,13 +10,10 @@ import 'react-multi-carousel/lib/styles.css';
 import ProjModal from '../components/modal/project-detail-modal';
 
 const ProjectDetail = data => {
-  console.log(data);
-
   const [showProjModal, setShowProjModal] = useState(false);
 
   const {
     projectData: {
-      id,
       projectTitle,
       projectDescription,
       coverAltText,
@@ -27,14 +24,6 @@ const ProjectDetail = data => {
       dynamicTechStack,
     },
   } = data.pageContext;
-
-  console.log(id);
-  console.log(projectTitle);
-  console.log(projectDescription);
-  console.log(coverAltText);
-  console.log(imageData);
-  console.log(dynamicProjectDetail);
-  console.log(dynamicTechStack);
 
   const responsive = {
     desktop: {

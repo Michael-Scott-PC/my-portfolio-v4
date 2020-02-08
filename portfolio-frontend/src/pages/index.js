@@ -1,4 +1,4 @@
-import styles from './index.module.css';
+import styles from '../css/index.module.css';
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 
@@ -8,18 +8,11 @@ import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const { strapiProfile } = data;
   const { nodes } = data.allStrapiBackgroundImage;
 
-  console.log(nodes);
-  let [homeTopM, homeTopD] = nodes.map(node =>
-    node.imageLocation === 'homeTopM' ? (homeTopM = node) : (homeTopD = node)
-  );
-  console.log(homeTopM);
-  console.log(homeTopD);
-  const imageDataXs = homeTopM.backgroundImage.childImageSharp.fluid;
-  const imageDataSm = homeTopD.backgroundImage.childImageSharp.fluid;
+  const imageDataXs = nodes[0].backgroundImage.childImageSharp.fluid;
+  const imageDataSm = nodes[1].backgroundImage.childImageSharp.fluid;
 
   return (
     <Fragment>
@@ -27,7 +20,7 @@ const IndexPage = ({ data }) => {
         <SEO title="Home" description={data.strapiProfile.jobTitle} />
         {/* xs screen */}
         <Img
-          style={{ width: '101%', height: '60vh', top: '-1px' }}
+          style={{ width: '100%', height: '60vh', top: '-1px' }}
           Tag="section"
           fluid={imageDataXs}
           className={`${styles.backgroundImgXs} d-sm-none`}

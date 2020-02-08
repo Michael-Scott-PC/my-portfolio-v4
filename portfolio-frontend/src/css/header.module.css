@@ -8,10 +8,11 @@
 }
 
 .siteTitle {
-  color: #e46a2d;
+  color: #af3b00;
   text-decoration: none;
   font-family: 'Agency FB';
   letter-spacing: 0.05em;
+  font-size: 1.2em;
 }
 
 .navbarTogglerLine {

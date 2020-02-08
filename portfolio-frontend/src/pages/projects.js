@@ -3,12 +3,16 @@ import React from 'react';
 import Layout from '../components/layout/layout';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import SEO from '../components/layout/seo';
 
 const projects = ({ data }) => {
   const { nodes } = data.allStrapiProject;
-  console.log(nodes);
   return (
     <Layout>
+      <SEO
+        title="Projects"
+        description="Full-stack development projects for Mike Enochs"
+      />
       <div>
         <h1 className="text-center my-5">Projects</h1>
         <div className={`${styles.projectsContainer} py-5`}>

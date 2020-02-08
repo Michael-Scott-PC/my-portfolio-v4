@@ -2,9 +2,9 @@ import styles from '../css/skills.module.css';
 import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
+import SEO from '../components/layout/seo';
 
 const skills = ({ data }) => {
-  console.log(data);
   const { dynamicSkills } = data.strapiProfile;
   const colors = [
     'blue',
@@ -18,6 +18,7 @@ const skills = ({ data }) => {
   ];
   return (
     <Layout>
+      <SEO title="Skills" description="Computer programming skills." />
       <div
         style={{
           margin: `0 auto`,

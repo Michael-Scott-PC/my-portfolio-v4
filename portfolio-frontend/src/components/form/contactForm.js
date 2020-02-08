@@ -1,4 +1,4 @@
-import contactFormStyles from './contactForm.module.css';
+import styles from '../../css/contactForm.module.css';
 import React, { Fragment } from 'react';
 import { Formik } from 'formik';
 import contactSchema from './schema/contactSchema';
@@ -47,9 +47,7 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupFirstName">
-                    <Form.Label className={contactFormStyles.formLabel}>
-                      Name
-                    </Form.Label>
+                    <Form.Label className={styles.formLabel}>Name</Form.Label>
                     <Form.Control
                       type="text"
                       name="contactName"
@@ -71,9 +69,7 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupEmail">
-                    <Form.Label className={contactFormStyles.formLabel}>
-                      Email
-                    </Form.Label>
+                    <Form.Label className={styles.formLabel}>Email</Form.Label>
                     <Form.Control
                       type="email"
                       name="contactEmail"
@@ -95,9 +91,7 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupPhoneNumber">
-                    <Form.Label className={contactFormStyles.formLabel}>
-                      Phone
-                    </Form.Label>
+                    <Form.Label className={styles.formLabel}>Phone</Form.Label>
                     <Form.Control
                       className="text-center"
                       type="text"
@@ -118,7 +112,7 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mx-auto text-center">
                   <Form.Group controlId="formGroupContactPreference">
-                    <Form.Label className={contactFormStyles.formLabel}>
+                    <Form.Label className={styles.formLabel}>
                       Contact Preference?
                     </Form.Label>
                     <Form.Control
@@ -148,7 +142,7 @@ const contactForm = () => {
               <Row>
                 <Col className="col-8 col-lg-6 mb-3 mx-auto text-center">
                   <Form.Group controlId="formGroupTextArea">
-                    <Form.Label className={contactFormStyles.formLabel}>
+                    <Form.Label className={styles.formLabel}>
                       How may I help you?
                     </Form.Label>
                     <Form.Control

@@ -3,12 +3,16 @@ import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import SEO from '../components/layout/seo';
 
 const hobbies = ({ data }) => {
-  console.log(data);
   const { nodes } = data.allStrapiHobby;
   return (
     <Layout>
+      <SEO
+        title="Hobbies"
+        description="Hobbies and interests for Mike Enochs."
+      />
       {nodes.map(node => (
         <Fragment key={node.id}>
           <BackgroundImage
