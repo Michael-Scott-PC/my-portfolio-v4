@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "client": "cd portfolio-frontend && yarn build && yarn serve",
-    "server": "cd portfolio-backend && yarn build && yarn start",
+    "client": "cd portfolio-frontend && yarn && yarn build && yarn serve",
+    "server": "cd portfolio-backend && yarn && yarn build && yarn start",
     "start": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "dependencies": {
