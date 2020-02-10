@@ -7,6 +7,12 @@
   background-size: contain;
 }
 
+.backgroundImages::before,
+.backgroundImages::after {
+  background-attachment: fixed;
+  background-position-y: 10vh !important;
+}
+
 .hobbyHeaders {
   font-family: 'Fugaz One';
   letter-spacing: 0.05em;

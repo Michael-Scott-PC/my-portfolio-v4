@@ -27,7 +27,7 @@ const blogPost = data => {
         <h1 className="text-center mb-1">{blogTitle}</h1>
         <p className={`${styles.blogDate} text-center`}>{createdAt}</p>
         <h4>{blogSubtitle}</h4>
-        <ul className={`${styles.ulCategories} ml-0`}>
+        <ul className={`${styles.ulCategories} ml-0 row`}>
           {categories.map(category => (
             <li key={category.categoryName} className="mr-3">
               {category.categoryName === 'Content Management System (CMS)'

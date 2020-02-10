@@ -44,7 +44,10 @@ const projects = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiProject(filter: { publishProject: { eq: true } }) {
+    allStrapiProject(
+      filter: { publishProject: { eq: true } }
+      sort: { order: DESC }
+    ) {
       nodes {
         coverAltText
         coverPhoto {

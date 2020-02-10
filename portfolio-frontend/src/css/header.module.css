@@ -26,6 +26,11 @@
   color: #ffffff;
 }
 
+.dropDownItem:hover {
+  color: rgb(0, 245, 212);
+  text-decoration: none;
+}
+
 .linkContainer {
   background-color: #37c9ff;
   display: grid;
@@ -34,7 +39,7 @@
   font-size: 1.5em;
   font-family: 'Quattrocento Sans', sans-serif;
   letter-spacing: 0.15em;
-  padding: 1em 0em 1em 0em;
+  padding: 1em 0em 3.5em 0em;
 }
 
 .myName {

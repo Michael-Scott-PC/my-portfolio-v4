@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
 
 const hobbies = ({ data }) => {
@@ -31,7 +32,7 @@ const hobbies = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiHobby {
+    allStrapiHobby(sort: { order: DESC }) {
       nodes {
         hobbyName
         hobbyInfo
