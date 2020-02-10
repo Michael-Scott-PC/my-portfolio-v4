@@ -57,8 +57,8 @@ const ProjectDetail = data => {
       <SEO title={projectTitle} description={projectDescription} />
       <div className={styles.divContainer}>
         <h2 className="text-center pt-5">{projectTitle} </h2>
-        <Row className="m-0" onClick={() => console.log('click')}>
-          <Col xs={12} lg={6} className="text-center my-5">
+        <Row className="m-0">
+          <Col xs={12} className={`${styles.imgContainer} text-center my-5`}>
             {' '}
             <Img
               className={`${styles.imgStyle}`}
@@ -66,15 +66,14 @@ const ProjectDetail = data => {
               alt={coverAltText}
             />
           </Col>
-          <Col lg={6} className="p-0">
+          <Col lg={12} className="p-0">
             <h3 className="text-center">Environment</h3>
-            <ul className={styles.ulTech}>
+            <ul className={`${styles.ulTech}`}>
               <Row>
                 {dynamicTechStack.map(stack => (
                   <Col key={stack.id}>
-                    <li className={styles.liTech} key={stack.id}>
-                      {' '}
-                      {stack.techUsed}{' '}
+                    <li className={`${styles.liTech}`} key={stack.id}>
+                      {stack.techUsed}
                     </li>
                   </Col>
                 ))}
@@ -82,8 +81,11 @@ const ProjectDetail = data => {
             </ul>
           </Col>
         </Row>
-        <h3>Project Description</h3>
+
         <Row>
+          <Col xs={12}>
+            <h3>Project Description</h3>
+          </Col>
           <Col>{projectDescription}</Col>
         </Row>
       </div>

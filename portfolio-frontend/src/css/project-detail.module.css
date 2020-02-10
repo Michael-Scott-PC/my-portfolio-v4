@@ -18,7 +18,13 @@
 }
 
 @media (min-width: 1000px) {
+  .divContainer {
+    padding: 0 6rem 1.45rem;
+  }
   .imgStyle {
     max-height: 50vh;
+    max-width: 55%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
