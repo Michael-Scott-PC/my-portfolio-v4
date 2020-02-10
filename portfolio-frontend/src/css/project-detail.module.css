@@ -16,3 +16,9 @@
 .react-multi-carousel-list {
   overflow: auto;
 }
+
+@media (min-width: 1000px) {
+  .imgStyle {
+    max-height: 50vh;
+  }
+}

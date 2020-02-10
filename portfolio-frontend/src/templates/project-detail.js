@@ -31,7 +31,7 @@ const ProjectDetail = data => {
         max: 3000,
         min: 1024,
       },
-      items: 3,
+      items: 10,
       partialVisibilityGutter: 40,
     },
     mobile: {
@@ -56,14 +56,18 @@ const ProjectDetail = data => {
     <Layout>
       <SEO title={projectTitle} description={projectDescription} />
       <div className={styles.divContainer}>
+        <h2 className="text-center pt-5">{projectTitle} </h2>
         <Row className="m-0" onClick={() => console.log('click')}>
-          <Col xs={12} className="text-center my-5">
+          <Col xs={12} lg={6} className="text-center my-5">
             {' '}
-            <h2>{projectTitle} </h2>
-            <Img fluid={imageData} alt={coverAltText} />
+            <Img
+              className={`${styles.imgStyle}`}
+              fluid={imageData}
+              alt={coverAltText}
+            />
           </Col>
-          <Col className="p-0">
-            <h3>Environment</h3>
+          <Col lg={6} className="p-0">
+            <h3 className="text-center">Environment</h3>
             <ul className={styles.ulTech}>
               <Row>
                 {dynamicTechStack.map(stack => (
@@ -90,10 +94,10 @@ const ProjectDetail = data => {
       >
         {dynamicProjectDetail.map(detail => (
           <Img
-            onClick={() => console.log('click')}
             key={detail.id}
             fixed={detail.projectDetailPhoto.childImageSharp.fixed}
             alt={detail.projectImageDescription}
+            className={styles.reactMultiCarouselItem}
           />
         ))}
       </Carousel>
