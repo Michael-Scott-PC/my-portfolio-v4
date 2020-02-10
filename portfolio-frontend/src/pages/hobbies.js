@@ -32,7 +32,7 @@ const hobbies = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiHobby(sort: { order: DESC }) {
+    allStrapiHobby(sort: { order: DESC, fields: createdAt }) {
       nodes {
         hobbyName
         hobbyInfo

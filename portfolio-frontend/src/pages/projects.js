@@ -46,7 +46,7 @@ export const query = graphql`
   {
     allStrapiProject(
       filter: { publishProject: { eq: true } }
-      sort: { order: DESC }
+      sort: { order: DESC, fields: createdAt }
     ) {
       nodes {
         coverAltText
