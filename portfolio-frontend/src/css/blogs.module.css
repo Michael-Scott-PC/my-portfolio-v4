@@ -31,3 +31,9 @@
 .blogSubtitle {
   font-family: 'Quicksand', sans-serif;
 }
+
+@media (min-width: 1000px) {
+  .blogPreviewDiv {
+    padding: 0 6rem 1.45rem;
+  }
+}

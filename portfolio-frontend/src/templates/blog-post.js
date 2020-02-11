@@ -22,8 +22,14 @@ const blogPost = data => {
   return (
     <Layout>
       <SEO title={blogTitle} description={blogSubtitle} />
-      <div className={styles.blogPostDiv}>
-        <Img fluid={imageData} alt={blogCoverAlt} className="mt-5" />
+      <div className={`${styles.blogPostDiv} mb-5`}>
+        <div className="text-center">
+          <Img
+            fluid={imageData}
+            alt={blogCoverAlt}
+            className={`${styles.imgStyle} mt-5`}
+          />
+        </div>
         <h1 className="text-center mb-1">{blogTitle}</h1>
         <p className={`${styles.blogDate} text-center`}>{createdAt}</p>
         <h4>{blogSubtitle}</h4>
@@ -46,7 +52,7 @@ const blogPost = data => {
               <Img
                 fluid={item.blogImage.childImageSharp.fluid}
                 alt={item.blogImageAlt}
-                className="mb-4"
+                className={`${styles.imgStyle} mb-4`}
               />
             )}
 

@@ -4,6 +4,7 @@ import Layout from '../components/layout/layout';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
+import { Row, Col } from 'react-bootstrap';
 
 const blogs = ({ data }) => {
   const { nodes } = data.allStrapiBlog;
@@ -21,16 +22,34 @@ const blogs = ({ data }) => {
           </h4>
           {nodes.map(node => (
             <div key={node.id} className={`${styles.blogPreviewDiv} pt-5`}>
-              <Img
+              <Row>
+                <Col lg={6}>
+                  <Img
+                    fluid={node.blogCover.childImageSharp.fluid}
+                    className={`${styles.coverImg} d-none d-lg-block`}
+                  />
+                </Col>
+                <Col xs={12} lg={6}>
+                  <h3 className={`${styles.blogTitle} mb-1`}>
+                    {node.blogTitle}
+                  </h3>
+                  <p className={styles.blogDate}>{node.createdAt}</p>
+                  <p className={`${styles.blogSubtitle} mb-2`}>
+                    {node.blogSubtitle}
+                  </p>
+                  <Link to={`/${node.slug}`}>Read More</Link>
+                </Col>
+              </Row>
+              {/* <Img
                 fluid={node.blogCover.childImageSharp.fluid}
-                className="d-none d-lg"
-              />
-              <h3 className={`${styles.blogTitle} mb-1`}>{node.blogTitle}</h3>
+                className={`${styles.coverImg} d-none d-lg-block`}
+              /> */}
+              {/* <h3 className={`${styles.blogTitle} mb-1`}>{node.blogTitle}</h3>
               <p className={styles.blogDate}>{node.createdAt}</p>
               <p className={`${styles.blogSubtitle} mb-2`}>
                 {node.blogSubtitle}
               </p>
-              <Link to={`/${node.slug}`}>Read More</Link>
+              <Link to={`/${node.slug}`}>Read More</Link> */}
             </div>
           ))}
         </div>

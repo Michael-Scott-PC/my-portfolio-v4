@@ -13,7 +13,7 @@ const projects = ({ data }) => {
         title="Projects"
         description="Full-stack development projects for Mike Enochs"
       />
-      <div>
+      <div className="text-center">
         <h1 className="text-center my-5">Projects</h1>
         <div className={`${styles.projectsContainer} py-5`}>
           {nodes.map(node => (
