@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => {
               </Link>
             </h1>
           </Col>
-          <Col xs={2} className="d-lg-none">
+          <Col xs={2} className="d-lg-none px-2 mb-2">
             <Img
               fluid={data.file.childImageSharp.fluid}
               style={{
