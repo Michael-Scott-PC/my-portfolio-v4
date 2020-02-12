@@ -45,6 +45,9 @@
     "blogCoverAlt": {
       "type": "string",
       "required": false
+    },
+    "readTime": {
+      "type": "string"
     }
   }
 }

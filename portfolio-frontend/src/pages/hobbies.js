@@ -9,7 +9,7 @@ import { Row, Col } from 'react-bootstrap';
 
 const hobbies = ({ data }) => {
   const { nodes } = data.allStrapiHobby;
-  console.log(nodes);
+
   return (
     <Layout>
       <SEO

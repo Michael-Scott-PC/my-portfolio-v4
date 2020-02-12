@@ -3,6 +3,8 @@ import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
+import Markdown from 'markdown-to-jsx';
+import { GiAlarmClock } from 'react-icons/gi';
 
 const blogPost = data => {
   const blog = data.pageContext.blogData;
@@ -15,6 +17,7 @@ const blogPost = data => {
     dynamicBlog,
     blogCoverAlt,
     createdAt,
+    readTime,
   } = blog;
 
   const imageData = blogCover.childImageSharp.fluid;
@@ -23,7 +26,7 @@ const blogPost = data => {
     <Layout>
       <SEO title={blogTitle} description={blogSubtitle} />
       <div className={`${styles.blogPostDiv} mb-5`}>
-        <div className="text-center">
+        <div className="text-center py-5">
           <Img
             fluid={imageData}
             alt={blogCoverAlt}
@@ -31,11 +34,18 @@ const blogPost = data => {
           />
         </div>
         <h1 className="text-center mb-1">{blogTitle}</h1>
-        <p className={`${styles.blogDate} text-center`}>{createdAt}</p>
+        <p className={`${styles.blogDate} mb-1 mt-5`}>{createdAt}</p>
+        <p className={`${styles.readTime} mt-1`}>
+          <GiAlarmClock className={'mr-2'} />
+          {readTime} minute read
+        </p>
         <h4>{blogSubtitle}</h4>
         <ul className={`${styles.ulCategories} ml-0 row`}>
           {categories.map(category => (
-            <li key={category.categoryName} className="mr-3">
+            <li
+              key={category.categoryName}
+              className={`${styles.category} mr-3`}
+            >
               {category.categoryName === 'Content Management System (CMS)'
                 ? 'CMS'
                 : category.categoryName === 'Search Engine Optimization (SEO)'
@@ -52,12 +62,14 @@ const blogPost = data => {
               <Img
                 fluid={item.blogImage.childImageSharp.fluid}
                 alt={item.blogImageAlt}
-                className={`${styles.imgStyle} mb-4`}
+                className={`${styles.imgStyle} my-4`}
               />
             )}
 
-            {item.blogText && <p>{item.blogText}</p>}
-            {item.blogCodeSample && <p>{item.blogCodeSample}</p>}
+            {item.blogText && (
+              <Markdown className={styles.blogText}>{item.blogText}</Markdown>
+            )}
+            {item.blogCodeSample && <Markdown>{item.blogCodeSample}</Markdown>}
           </Fragment>
         ))}
       </div>

@@ -128,6 +128,7 @@ exports.createPages = async ({ actions, graphql }) => {
               }
               blogCoverAlt
               createdAt(formatString: "dddd, MMMM Do, YYYY")
+              readTime
             }
           }
         }

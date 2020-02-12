@@ -5,7 +5,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import Img from 'gatsby-image';
 
 const projectDetailModal = props => {
-  console.log(props);
   return (
     <div>
       <Modal {...props}>

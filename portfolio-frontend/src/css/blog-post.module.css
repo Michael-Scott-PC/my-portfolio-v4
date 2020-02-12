@@ -1,7 +1,7 @@
 .blogPostDiv {
   margin: 0 auto;
   max-width: 960;
-  padding: 0 1.0875rem 1.45rem;
+  padding: 0 2rem 1.45rem;
 }
 
 .ulCategories {
@@ -13,6 +13,28 @@
 .blogDate {
   font-weight: bold;
   color: #7e7c7c;
+  font-family: 'Gudea';
+}
+
+.readTime {
+  font-weight: bold;
+  color: #7e7c7c;
+  font-size: 0.8rem;
+  font-family: 'Gudea';
+}
+
+.category {
+  font-family: 'Gudea';
+}
+
+.blogText {
+  font-family: 'Quicksand', sans-serif;
+}
+
+blockquote {
+  border-left: 3px solid #7e7c7c;
+  margin-left: 0;
+  padding-left: 1.45rem;
 }
 
 @media (min-width: 1000px) {
@@ -22,7 +44,7 @@
     padding: 0 6rem 1.45rem;
   }
   .imgStyle {
-    width: 40%;
+    width: 55%;
     margin-right: auto;
     margin-left: auto;
   }

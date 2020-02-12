@@ -86,7 +86,7 @@ const ProjectDetail = data => {
           <Col xs={12}>
             <h3>Project Description</h3>
           </Col>
-          <Col>{projectDescription}</Col>
+          <Col className={styles.projectDescription}>{projectDescription}</Col>
         </Row>
       </div>
 

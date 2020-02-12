@@ -1,6 +1,10 @@
-/* .ulTech {
-  list-style: none;
-} */
+.ulTech {
+  font-family: 'Gudea';
+}
+
+.projectDescription {
+  font-family: 'Gudea';
+}
 
 /* .liTech {
   display: inline-flex;
