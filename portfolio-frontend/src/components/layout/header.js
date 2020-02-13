@@ -57,7 +57,14 @@ const Header = ({ siteTitle }) => {
           </Col>
 
           <Col xs={8} lg={3} className="m-auto text-center">
-            <h1 style={{ margin: 0, fontSize: '1.5em' }}>
+            <h1
+              style={{
+                margin: 0,
+                fontSize: '1.5em',
+                paddingLeft: '0px',
+                paddingRight: '0px',
+              }}
+            >
               <Link to="/" className={`${styles.siteTitle}`}>
                 {siteTitle}
               </Link>
