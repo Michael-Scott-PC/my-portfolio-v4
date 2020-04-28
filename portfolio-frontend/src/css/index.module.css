@@ -4,7 +4,7 @@
 
 .welcome {
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.5em;
   color: #ffffff;
 }
 
@@ -33,10 +33,6 @@
 ***********************/
 
 @media (min-width: 500px) {
-  /* .backgroundImgXs {
-    display: none;
-  } */
-
   .myName {
     display: none;
   }

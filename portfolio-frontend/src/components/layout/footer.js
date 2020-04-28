@@ -29,14 +29,14 @@ const Footer = () => {
 
   return (
     <footer className={`${footerStyles.footer} container-fluid`}>
-      <div className="row text-center" style={{ height: '100%' }}>
+      <div className="row text-center pt-5" style={{ height: '100%' }}>
         <div className="col-sm-12 mt-4">
           {strapiProfile.github && (
             <a
               href={`${strapiProfile.github}`}
               aria-label="github icon"
               style={{ color: '#fff', fontSize: '1.5em' }}
-              className="m-1"
+              className="m-1 col-md-3"
             >
               <FaGithub />
             </a>
@@ -46,7 +46,7 @@ const Footer = () => {
               href={`${strapiProfile.linkedin}`}
               aria-label="Linkedin icon"
               style={{ color: '#fff', fontSize: '1.5em' }}
-              className="m-1"
+              className="m-1 col-md-3"
             >
               <FaLinkedin />
             </a>
@@ -56,7 +56,7 @@ const Footer = () => {
               href={`${strapiProfile.twitter}`}
               aria-label="Twitter icon"
               style={{ color: '#fff', fontSize: '1.5em' }}
-              className="m-1"
+              className="m-1 col-md-3"
             >
               <FaTwitter />
             </a>
@@ -66,7 +66,7 @@ const Footer = () => {
               href={`${strapiProfile.instagram}`}
               aria-label="Instagram icon"
               style={{ color: '#fff', fontSize: '1.5em' }}
-              className="m-1"
+              className="m-1 col-md-3"
             >
               <FaInstagram />
             </a>
@@ -78,7 +78,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="email icon"
               style={{ color: '#fff', fontSize: '1.5em' }}
-              className="m-1"
+              className="m-1 col-md-3"
             >
               <FaEnvelope />
             </a>

@@ -89,22 +89,46 @@ const Header = ({ siteTitle }) => {
               style={{ width: '7%' }}
               className="d-none d-lg-inline mr-5"
             />
-            <Link to="/" className={`${styles.dropDownItem}`}>
+            <Link
+              to="/"
+              className={`${styles.dropDownItem}`}
+              activeClassName={styles.active}
+            >
               Home
             </Link>
-            <Link to="/projects" className={`${styles.dropDownItem}`}>
+            <Link
+              to="/projects"
+              className={`${styles.dropDownItem}`}
+              activeClassName={styles.active}
+            >
               Projects
             </Link>
-            <Link to="/skills" className={`${styles.dropDownItem}`}>
+            <Link
+              to="/skills"
+              className={`${styles.dropDownItem}`}
+              activeClassName={styles.active}
+            >
               Skills
             </Link>
-            <Link to="/hobbies" className={`${styles.dropDownItem}`}>
+            <Link
+              to="/hobbies"
+              className={`${styles.dropDownItem}`}
+              activeClassName={styles.active}
+            >
               Hobbies
             </Link>
-            <Link to="/blogs" className={`${styles.dropDownItem}`}>
+            <Link
+              to="/blogs"
+              className={`${styles.dropDownItem}`}
+              activeClassName={styles.active}
+            >
               Blog
             </Link>
-            <Link to="/contact" className={`${styles.dropDownItem}`}>
+            <Link
+              to="/contact"
+              className={`${styles.dropDownItem}`}
+              activeClassName={styles.active}
+            >
               Contact
             </Link>
           </Col>

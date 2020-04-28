@@ -2,7 +2,6 @@ import styles from '../css/blogs.module.css';
 import React, { Fragment } from 'react';
 import Layout from '../components/layout/layout';
 import { graphql, Link } from 'gatsby';
-// import Img from 'gatsby-image';
 import SEO from '../components/layout/seo';
 import { Row, Col } from 'react-bootstrap';
 import { GiAlarmClock } from 'react-icons/gi';
@@ -24,12 +23,6 @@ const blogs = ({ data }) => {
           {nodes.map(node => (
             <div key={node.id} className={`${styles.blogPreviewDiv} pt-5`}>
               <Row className={styles.rowContainer}>
-                {/* <Col lg={6}>
-                  <Img
-                    fluid={node.blogCover.childImageSharp.fluid}
-                    className={`${styles.coverImg} d-none d-lg-block`}
-                  />
-                </Col> */}
                 <Col xs={12} lg={6}>
                   <h3 className={`${styles.blogTitle} mb-1`}>
                     {node.blogTitle}

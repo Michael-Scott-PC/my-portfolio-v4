@@ -3,3 +3,16 @@
   height: 25vh;
   margin-top: 5rem;
 }
+
+svg:hover {
+  color: rgb(0, 245, 212);
+}
+
+@media (min-width: 1000px) {
+  svg {
+    font-size: 1.75em;
+  }
+  .linkRow {
+    align-content: center;
+  }
+}
